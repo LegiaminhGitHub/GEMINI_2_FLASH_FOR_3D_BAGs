@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whaleconomist: Recycle & Reimagine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f9; 
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50; 
+            padding: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky; 
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            color: #ecf0f1; 
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #3498db; 
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2em;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            font-size: 1em;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+   
+        .hero {
+            background-color: #e0f2f7; 
+            padding: 6em 0;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 1em;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 2em;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            padding: 1em 2em;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .primary-button {
+            background-color: #3498db;
+            color: #fff;
+            margin-right: 1em;
+        }
+
+        .primary-button:hover {
+            background-color: #2980b9;
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .secondary-button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 4em 0;
+            background-color: #fff;
+        }
+
+        .process-section .container {
+            text-align: center;
+        }
+
+        .process-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 1em;
+        }
+
+        .section-description {
+            color: #777;
+            margin-bottom: 2em;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .step {
+            padding: 2em;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .step h3 {
+            font-size: 1.2em;
+            color: #3498db;
+            margin-bottom: 0.5em;
+        }
+
+        .step p {
+            color: #555;
+        }
+
+       
+        .vouchers-section {
+            padding: 4em 0;
+            background-color: #e0f2f7;
+            text-align: center;
+        }
+
+        .voucher-details {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .voucher-details p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5em;
+        }
+
+   
+        #totes {
+            padding: 4em 0;
+            background-color: #fff;
+        }
+
+        #totes .container {
+            text-align: center;
+        }
+
+        #totes h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 1em;
+        }
+
+        #totes .tote-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        #totes .tote-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        #totes .tote-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        #totes .tote-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #totes .tote-item .description {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        #totes .product-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #totes .size-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        #totes .size-button {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        #totes .size-button.selected {
+            border-color: #3498db;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        #totes .add-to-cart {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #totes .add-to-cart:hover {
+            background-color: #218838;
+        }
+
+        #totes .call-to-action {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+
+        .custom-design {
+            padding: 4em 0;
+            background-color: #e0f2f7;
+            text-align: center;
+        }
+
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2em 0;
+            font-size: 0.9em;
+            margin-top: 4em;
+        }
+
+        footer .container {
+            max-width: 600px;
+        }
+
+        footer p {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo"><span>Whale</span>conomist</a>
+                <ul class="nav-links">
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#vouchers">Vouchers</a></li>
+                    <li><a href="#totes">Our Totes</a></li>
+                    <li><a href="#custom">Custom Design</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Turn Your Old Threads into New Treasures with Whaleconomist</h1>
+                <p>Give your used clothes a new life! Deposit them in our machine, earn vouchers, and contribute to creating beautiful, sustainable tote bags – or design your very own.</p>
+                <div class="hero-buttons">
+                    <a href="#process" class="button primary-button">Discover Our Process</a>
+                    <a href="#totes" class="button secondary-button">Explore Our Totes</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process-section">
+            <div class="container">
+                <h2>How It Works</h2>
+                <p class="section-description">Learn how easy it is to recycle your clothes and get rewarded.</p>
+                <div class="process-steps">
+                    <div class="step">
+                        <h3>1. Deposit Your Clothes</h3>
+                        <p>Bring your old, used clothing to a designated Whaleconomist machine.</p>
+                    </div>
+                    <div class="step">
+                        <h3>2. Receive Vouchers</h3>
+                        <p>Our machine assesses your deposit, and you instantly receive valuable vouchers.</p>
+                    </div>
+                    <div class="step">
+                        <h3>3. Reimagine the Fabric</h3>
+                        <p>The fabrics from your old clothes are extracted and used to create our sustainable tote bags.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vouchers" class="vouchers-section">
+            <div class="container">
+                <h2>Unlock Value with Our Vouchers</h2>
+                <p class="section-description">See what rewards await you when you recycle with Whaleconomist.</p>
+                <div class="voucher-details">
+                    <p>Redeem your Whaleconomist vouchers for discounts on our range of eco-friendly tote bags or other sustainable products. The more you recycle, the more you save!</p>
+                    <a href="voucher.html" class="button primary-button">View Voucher Benefits</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="totes" class="totes-preview">
+            <div class="container">
+                <h2>Our Collection of Sustainable Totes</h2>
+                <p class="section-description">Discover our range of stylish and eco-friendly tote bags, crafted from recycled fabrics. Choose your preferred size.</p>
+                <div class="tote-grid">
+                    <div class="tote-item">
+                        <img src="images/denim-tote.jpg" alt="Recycled Denim Tote">
+                        <h3>Recycled Denim Tote</h3>
+                        <p class="description">Durable and stylish tote made from repurposed denim.</p>
+                        <div class="product-actions">
+                            <div class="size-options">
+                                <button class="size-button">S</button>
+                                <button class="size-button">M</button>
+                                <button class="size-button">L</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="tote-item">
+                        <img src="images/cotton-tote.jpg" alt="Upcycled Cotton Tote">
+                        <h3>Upcycled Cotton Tote</h3>
+                        <p class="description">Soft and versatile tote crafted from reclaimed cotton.</p>
+                        <div class="product-actions">
+                            <div class="size-options">
+                                <button class="size-button">S</button>
+                                <button class="size-button">M</button>
+                                <button class="size-button">L</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="tote-item">
+                        <img src="images/patterned-tote.jpg" alt="Patterned Recycled Tote">
+                        <h3>Patterned Recycled Tote</h3>
+                        <p class="description">Unique patterned tote made from a blend of recycled fabrics.</p>
+                        <div class="product-actions">
+                            <div class="size-options">
+                                <button class="size-button">S</button>
+                                <button class="size-button">M</button>
+                                <button class="size-button">L</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="call-to-action">
+                    <a href="#" class="button primary-button">See Our Full Tote Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom" class="custom-design">
+            <div class="container">
+                <h2>Design Your Unique Tote</h2>
+                <p class="section-description">Express your individuality! Use the value of your recycled clothes to create a custom tote bag with your own design.</p>
+                <a href="make-totes.html" class="button primary-button">Start Custom Design</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Whaleconomist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toteGrids = document.querySelectorAll('.tote-grid');
+
+            toteGrids.forEach(grid => {
+                grid.addEventListener('click', function(event) {
+                    if (event.target.classList.contains('size-button')) {
+                        const sizeButtons = this.querySelectorAll('.size-button');
+                        sizeButtons.forEach(btn => btn.classList.remove('selected'));
+                        event.target.classList.add('selected');
+                    }
+                });
+            });
+
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const toteItem = this.closest('.tote-item');
+                    const toteName = toteItem.querySelector('h3').textContent;
+                    const selectedSize = toteItem.querySelector('.size-button.selected');
+
+                    if (selectedSize) {
+                        alert(`"${toteName}" (Size: ${selectedSize.textContent}) added to your cart!`);
+                        
+                    } else {
+                        alert(`Please select a size for "${toteName}".`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

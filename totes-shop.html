@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whaleconomist Totes: Sustainable Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+       
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f9; 
+            color: #333;
+            margin: 0;
+            padding-top: 60px; 
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .totes-hero {
+            background-color: #e0f2f7; 
+            padding: 4em 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .totes-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 1em;
+        }
+
+        .totes-hero p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .tote-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .tote-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .tote-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .tote-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .tote-item .description {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .size-button {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        .size-button.selected {
+            border-color: #3498db;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .add-to-cart {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2em 0;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        footer .container {
+            max-width: 600px;
+        }
+
+        footer p {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo"><span>Whale</span>conomist</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#process">Our Process</a></li>
+                    <li><a href="index.html#vouchers">Vouchers</a></li>
+                    <li><a href="#totes">Our Totes</a></li>
+                    <li><a href="index.html#custom">Custom Design</a></li>
+                    <li><a href="totes-shop.html">Shop Totes</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="totes-hero">
+            <h1>Discover Our Sustainable Tote Bag Collection</h1>
+            <p>Explore our range of eco-friendly and stylish tote bags, crafted with care from recycled materials. Find the perfect size and style to complement your commitment to sustainability.</p>
+        </section>
+
+        <div class="tote-grid">
+            <div class="tote-item">
+                <img src="images/denim-tote-large.jpg" alt="Recycled Denim Tote">
+                <h3>Recycled Denim Tote</h3>
+                <p class="description">Durable and stylish tote made from repurposed denim. Perfect for everyday use.</p>
+                <div class="product-actions">
+                    <div class="size-options">
+                        <button class="size-button">S</button>
+                        <button class="size-button">M</button>
+                        <button class="size-button">L</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="tote-item">
+                <img src="images/cotton-tote-large.jpg" alt="Upcycled Cotton Tote">
+                <h3>Upcycled Cotton Tote</h3>
+                <p class="description">Soft and versatile tote crafted from reclaimed cotton. Lightweight and comfortable.</p>
+                <div class="product-actions">
+                    <div class="size-options">
+                        <button class="size-button">S</button>
+                        <button class="size-button">M</button>
+                        <button class="size-button">L</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="tote-item">
+                <img src="images/patterned-tote-large.jpg" alt="Patterned Recycled Tote">
+                <h3>Patterned Recycled Tote</h3>
+                <p class="description">Unique patterned tote made from a blend of recycled fabrics. Each one is one-of-a-kind.</p>
+                <div class="product-actions">
+                    <div class="size-options">
+                        <button class="size-button">S</button>
+                        <button class="size-button">M</button>
+                        <button class="size-button">L</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="tote-item">
+                <img src="images/striped-tote-large.jpg" alt="Striped Recycled Tote">
+                <h3>Striped Recycled Tote</h3>
+                <p class="description">Classic striped tote made from durable recycled materials.</p>
+                <div class="product-actions">
+                    <div class="size-options">
+                        <button class="size-button">S</button>
+                        <button class="size-button">M</button>
+                        <button class="size-button">L</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="tote-item">
+                <img src="images/canvas-tote-large.jpg" alt="Recycled Canvas Tote">
+                <h3>Recycled Canvas Tote</h3>
+                <p class="description">Sturdy and spacious tote made from recycled canvas.</p>
+                <div class="product-actions">
+                    <div class="size-options">
+                        <button class="size-button">S</button>
+                        <button class="size-button">M</button>
+                        <button class="size-button">L</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Whaleconomist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toteGrids = document.querySelectorAll('.tote-grid');
+
+            toteGrids.forEach(grid => {
+                grid.addEventListener('click', function(event) {
+                    if (event.target.classList.contains('size-button')) {
+                        const sizeButtons = this.querySelectorAll('.size-button');
+                        sizeButtons.forEach(btn => btn.classList.remove('selected'));
+                        event.target.classList.add('selected');
+                    }
+                });
+            });
+
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const toteItem = this.closest('.tote-item');
+                    const toteName = toteItem.querySelector('h3').textContent;
+                    const selectedSize = toteItem.querySelector('.size-button.selected');
+
+                    if (selectedSize) {
+                        alert(`"${toteName}" (Size: ${selectedSize.textContent}) added to your cart!`);
+                        
+                    } else {
+                        alert(`Please select a size for "${toteName}".`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

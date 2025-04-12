@@ -1,0 +1,424 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* Clear and modern font */
+    margin: 0;
+    background-color: #e0f2f7; /* Light blue-gray, like a hazy ocean */
+    color: #37474f; /* Dark blue-gray, deep sea */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px; /* Increased padding for more space */
+}
+
+/* Header and Navbar */
+header {
+    background-color: #fff; /* White, like the crest of a wave */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700; /* Bolder */
+    text-decoration: none;
+    color: #1e88e5; /* Medium blue, like a curious whale */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #546e7a; /* Blue-gray, calm ocean depths */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #1e88e5; /* Blue hover color, a ripple on the surface */
+}
+
+/* Main Content - Hero Section */
+main {
+    padding-top: 70px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px; /* Increased padding */
+    background-color: #bbdefb; /* Light blue, like the sunlit ocean surface */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px); /* Cover viewport minus header height */
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Larger */
+    color: #1e88e5; /* Medium blue, clear ocean water */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #546e7a; /* Blue-gray, thoughtful and deep */
+    margin-bottom: 40px; /* Increased spacing */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 15px 35px; /* Larger */
+    border-radius: 8px; /* More rounded, like smooth stones */
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons .primary-button {
+    background-color: #1e88e5; /* Medium blue, active and engaging */
+    color: white;
+}
+
+.hero-buttons .primary-button:hover {
+    background-color: #1565c0; /* Darker blue hover color, a deeper dive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-buttons .secondary-button {
+    background-color: transparent;
+    color: #1e88e5; /* Medium blue, an outline of the primary */
+    border: 2px solid #1e88e5;
+}
+
+.hero-buttons .secondary-button:hover {
+    background-color: #e0f2f7; /* Light blue-gray hover background, a subtle shift */
+    color: #1565c0;
+    border-color: #1565c0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Process Section */
+.process-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.process-section h2 {
+    font-size: 2.8em;
+    color: #1e88e5;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.process-section .section-description {
+    color: #546e7a;
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.process-steps .step {
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.process-steps .step h3 {
+    color: #1e88e5;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.process-steps .step p {
+    color: #78909c;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Vouchers Section */
+.vouchers-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e0f2f7; /* Light blue-gray background */
+}
+
+.vouchers-section h2 {
+    font-size: 2.8em;
+    color: #1e88e5;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.vouchers-section .section-description {
+    color: #546e7a;
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.vouchers-section .voucher-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.vouchers-section .voucher-details p {
+    color: #78909c;
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.vouchers-section .voucher-details .button {
+    background-color: #29b6f6; /* Light bright blue for emphasis */
+    color: white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vouchers-section .voucher-details .button:hover {
+    background-color: #03a9f4;
+}
+
+/* Totes Preview Section */
+.totes-preview {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.totes-preview h2 {
+    font-size: 2.8em;
+    color: #1e88e5;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.totes-preview .section-description {
+    color: #546e7a;
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.tote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tote-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 1px solid #e0f7fa; /* Very light blue border */
+}
+
+.tote-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.tote-item h3 {
+    color: #1e88e5;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.tote-item .description {
+    color: #78909c;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.tote-item a.button {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tote-item a.button:hover {
+    background-color: #1565c0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.totes-preview .call-to-action {
+    margin-top: 50px;
+}
+
+/* Custom Design Section */
+.custom-design {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e0f2f7; /* Light blue-gray background */
+}
+
+.custom-design h2 {
+    font-size: 2.8em;
+    color: #1e88e5;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.custom-design .section-description {
+    color: #546e7a;
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.custom-design .button {
+    background-color: #29b6f6; /* Light bright blue for call to action */
+    color: white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-design .button:hover {
+    background-color: #03a9f4;
+}
+
+/* Footer */
+footer {
+    background-color: #e0f2f7; /* Light blue-gray */
+    color: #78909c;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    border-top: 1px solid #b0bec5; /* Gray-blue border */
+}
+
+footer .container {
+    padding: 15px;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Responsive (optional) */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-buttons a {
+        padding: 12px 30px;
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .process-steps .step {
+        max-width: 100%;
+    }
+
+    .tote-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
